@@ -7,20 +7,35 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cruciatus.Xml.UI", "Cruciat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cruciatus.Xml.CLI", "Cruciatus.Xml.CLI\Cruciatus.Xml.CLI.csproj", "{1612BB97-5041-4297-8387-6A8D0B6B6951}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Root", "Root", "{13009B51-36A8-4BE6-9CD6-CBC1B71239BF}"
+	ProjectSection(SolutionItems) = preProject
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{6FD0B32F-7CFF-4CE1-8822-E2DEFFB18D99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6FD0B32F-7CFF-4CE1-8822-E2DEFFB18D99}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6FD0B32F-7CFF-4CE1-8822-E2DEFFB18D99}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6FD0B32F-7CFF-4CE1-8822-E2DEFFB18D99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FD0B32F-7CFF-4CE1-8822-E2DEFFB18D99}.Debug|x86.ActiveCfg = Debug|x86
+		{6FD0B32F-7CFF-4CE1-8822-E2DEFFB18D99}.Debug|x86.Build.0 = Debug|x86
+		{6FD0B32F-7CFF-4CE1-8822-E2DEFFB18D99}.Release|Any CPU.ActiveCfg = Release|x86
+		{6FD0B32F-7CFF-4CE1-8822-E2DEFFB18D99}.Release|Any CPU.Build.0 = Release|x86
+		{6FD0B32F-7CFF-4CE1-8822-E2DEFFB18D99}.Release|x86.ActiveCfg = Release|x86
+		{6FD0B32F-7CFF-4CE1-8822-E2DEFFB18D99}.Release|x86.Build.0 = Release|x86
 		{1612BB97-5041-4297-8387-6A8D0B6B6951}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1612BB97-5041-4297-8387-6A8D0B6B6951}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1612BB97-5041-4297-8387-6A8D0B6B6951}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1612BB97-5041-4297-8387-6A8D0B6B6951}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1612BB97-5041-4297-8387-6A8D0B6B6951}.Debug|x86.ActiveCfg = Debug|x86
+		{1612BB97-5041-4297-8387-6A8D0B6B6951}.Debug|x86.Build.0 = Debug|x86
+		{1612BB97-5041-4297-8387-6A8D0B6B6951}.Release|Any CPU.ActiveCfg = Release|x86
+		{1612BB97-5041-4297-8387-6A8D0B6B6951}.Release|Any CPU.Build.0 = Release|x86
+		{1612BB97-5041-4297-8387-6A8D0B6B6951}.Release|x86.ActiveCfg = Release|x86
+		{1612BB97-5041-4297-8387-6A8D0B6B6951}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
