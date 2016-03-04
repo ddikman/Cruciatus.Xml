@@ -66,6 +66,11 @@ namespace Cruciatus.Xml.CLI
                 {
                     return XmlConvert.VerifyNCName(_element.Current.Name);
                 }
+                catch (ElementNotAvailableException)
+                {
+                    Console.Error.WriteLine("Unavailable tag for: " + _element.Current.ClassName);
+                    return "UnavailableTag";
+                }
                 catch (ArgumentNullException)
                 {
                     Console.Error.WriteLine("Missing tag for: " + _element.Current.ClassName);
@@ -134,13 +139,22 @@ namespace Cruciatus.Xml.CLI
         {
             try
             {
-                return this._element.GetCurrentPropertyValue(property);
+                return _element.GetCurrentPropertyValue(property);
             }
-            catch (InvalidOperationException)
+            catch (ElementNotAvailableException e)
             {
-                Console.Error.WriteLine("Failed to get property: " + property.Id);
-                return string.Empty;
+                return LogPropertyRetrievalError(property.Id, e.Message);
             }
+            catch (InvalidOperationException e)
+            {
+                return LogPropertyRetrievalError(property.Id, e.Message);
+            }
+        }
+
+        private string LogPropertyRetrievalError(int propertyId, string message)
+        {
+            Console.Error.WriteLine("Failed to get property '" + propertyId + "': " + message);
+            return string.Empty;
         }
 
         internal override bool IsSamePosition(XPathItem item)

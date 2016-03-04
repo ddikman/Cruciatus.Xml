@@ -18,6 +18,9 @@ namespace Cruciatus.Xml.CLI
         public string Parse()
         {
             var rootElement = AutomationHelper.GetApplicationRoot(_processId);
+            if(rootElement == null)
+                throw new Exception("Failed to find process with process id: " + _processId);
+
             var root = CreateElementRecursive(rootElement);
             var doc = new XDocument(root);
             return doc.ToString(SaveOptions.None);
